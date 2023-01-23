@@ -14,6 +14,7 @@ console.log('================================================== ')
 
 //Var:
 let serverExpress = require('http'); //serverExpress contains all the methods of the HTTP protocol to run a web server
+let serverUrl = require('url');//Regístra la diercción de URL y permite especificar un comportamiento personalizado 
 let codeBrowser = 200;
 let listenPort = 2121;//listen virtual port default  
 
