@@ -8,7 +8,16 @@ Contac me in: asdrubalcorales92@gmail.com
 My phone number is: +58 412 4811678 */
 
 //Instantantiation
-let Server = require('./node-express-server')
-let Xrouter = require('./routerNodExpresserver')
-Server.Init(Xrouter.Router);//Call the init and router
+let Server = require('./node-express-server')//Call Server
+let Xrouter = require('./routerNodExpresserver')//Call router
+let Xrequests = require('./requestsNodExpresserver.js')//Call requests
+
+//Requests Hhandler
+let manejador = {}//Vector
+manejador['/'] = Xrequests.xinit;
+manejador['/pagina1'] = Xrequests.pagina1;
+manejador['/pagina2'] = Xrequests.pagina2;
+
+
+Server.Init(Xrouter.Router,manejador);//Call the init and router
 //Server.Init();//Call the init
