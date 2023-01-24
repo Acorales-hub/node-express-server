@@ -19,17 +19,18 @@ let codeBrowser = 200;
 let listenPort = 1111;//listen virtual port default  
 
 //Functions:
-function Init(Router)//Capsule
+function Init(Router,manejador)//Capsule
 {
     function startServerExpress(requires,reply)//This function starts Node Express Server
     {
         //Router:
         var Rute = url.parse(requires.url).pathname;//captures what is entered in the url and stores it in a variable
         console.log('A new connection detected');
-        Router(Rute);//Call function router in roterNodExpresserver.js
+        Router(manejador,Rute);//Call function router in roterNodExpresserver.js
         reply.writeHead(codeBrowser,{"Content-Type":"text/html"});//whriteHead sends the type of document to the header to the borwser
         reply.write("<br><center><h1>Welcome to Node Express Server</h1><br>Powered by .::CORALESoftware::.</center>");
         reply.write("<br><br>   A new connection detected")
+        reply.write("<br><br>   A new rute detected... "+Rute)
         reply.end(); // This line closes the connection
         console.log('--------------------------------------------------')
     }
