@@ -9,4 +9,5 @@ My phone number is: +58 412 4811678 */
 
 //Instantantiation
 let Server = require('./node-express-server')
-Server.Init();//Call the init
+let Router = require('./routerNodExpresserver')
+Server.Init(Router.router);//Call the init and router
