@@ -14,24 +14,26 @@ console.log('================================================== ')
 
 //Var:
 let serverExpress = require('http'); //serverExpress contains all the methods of the HTTP protocol to run a web server
-let serverUrl = require('url');//Regístra la diercción de URL y permite especificar un comportamiento personalizado 
+let url = require('url');//Regístra la diercción de URL y permite especificar un comportamiento personalizado 
 let codeBrowser = 200;
-let listenPort = 2121;//listen virtual port default  
+let listenPort = 1111;//listen virtual port default  
 
 //Functions:
-function Init(router)//Capsule
+function Init(enrutar)//Capsule
 {
     function startServerExpress(requires,reply)//This function starts Node Express Server
     {
         //Router:
-        var route = serverUrl.parse(require.serverUrl).pathname;//captures what is entered in the url and stores it in a variable
-        router(route)
+        var ruta = url.parse(requires.url).pathname;//captures what is entered in the url and stores it in a variable
+        
+        console.log('A new connection detected')
 
-     console.log('A new connection detected')
-     reply.writeHead(codeBrowser,{"Content-Type":"text/html"});//whriteHead sends the type of document to the header to the borwser
-     reply.write("<br><center><h1>Welcome to Node Express Server</h1><br>Powered by .::CORALESoftware::.</center>");
-     reply.write("<br><br>   A new connection detected")
-     reply.end(); // This line closes the connection
+        enrutar(ruta);//Call function router in roterNodExpresserver.js
+
+        reply.writeHead(codeBrowser,{"Content-Type":"text/html"});//whriteHead sends the type of document to the header to the borwser
+        reply.write("<br><center><h1>Welcome to Node Express Server</h1><br>Powered by .::CORALESoftware::.</center>");
+        reply.write("<br><br>   A new connection detected")
+        reply.end(); // This line closes the connection
     }
     serverExpress.createServer(startServerExpress).listen(listenPort);//Call the Node Express Server
 }
