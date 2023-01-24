@@ -19,10 +19,14 @@ let codeBrowser = 200;
 let listenPort = 2121;//listen virtual port default  
 
 //Functions:
-function Init()//Capsule
+function Init(router)//Capsule
 {
     function startServerExpress(requires,reply)//This function starts Node Express Server
     {
+        //Router:
+        var route = serverUrl.parse(require.serverUrl).pathname;//captures what is entered in the url and stores it in a variable
+        router(route)
+
      console.log('A new connection detected')
      reply.writeHead(codeBrowser,{"Content-Type":"text/html"});//whriteHead sends the type of document to the header to the borwser
      reply.write("<br><center><h1>Welcome to Node Express Server</h1><br>Powered by .::CORALESoftware::.</center>");
