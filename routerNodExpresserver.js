@@ -7,8 +7,12 @@ License: MIT.
 Contac me in: asdrubalcorales92@gmail.com
 My phone number is: +58 412 4811678 */
 
-//Functions
-function router()
+//Var:
+let route //this is the route
+
+//Functions:
+function router(route)//this is the router
 {
-    
+    console.log('The route for:'+route)
 }
+exports.router = router; //router function export
