@@ -8,11 +8,11 @@ Contac me in: asdrubalcorales92@gmail.com
 My phone number is: +58 412 4811678 */
 
 //Var:
-let route //this is the route
+//let route this is the route
 
 //Functions:
-function router(route)//this is the router
+function enrutar(ruta)//this is the router
 {
-    console.log('The route for:'+route)
+    console.log('voy a enrutar algo:'+ruta)
 }
-exports.router = router; //router function export
+exports.enrutar = enrutar; //router function export
