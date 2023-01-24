@@ -11,8 +11,8 @@ My phone number is: +58 412 4811678 */
 //let route this is the route
 
 //Functions:
-function enrutar(ruta)//this is the router
+function Router(xrute)//this is the router
 {
-    console.log('voy a enrutar algo:'+ruta)
+    console.log('route detected:'+xrute)
 }
-exports.enrutar = enrutar; //router function export
+exports.Router = Router; //router function export
