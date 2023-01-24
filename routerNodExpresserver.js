@@ -11,8 +11,23 @@ My phone number is: +58 412 4811678 */
 //let route this is the route
 
 //Functions:
-function Router(xrute)//this is the router
+function Router(manejador,xrute)//this is the router
 {
-    console.log('route detected:'+xrute)
+    console.log('route detected:'+xrute);
+    
+    //Evaluation
+    if(typeof manejador[xrute] ==='function')
+    {
+        return manejador[xrute]();
+    }else{
+        console.log("This is not a function: "+xrute);
+    }
+    
 }
 exports.Router = Router; //router function export
+
+
+/*NOTE: si no se evalua el vector manejador[xrute] va a generar un error de ejecución
+motivado a la ruta ./favicon.ico que solicita el icono de cada website para la pestaña
+del navegador, por cual se debe hacer una función con su estructura de control y evaluación
+que trate a ./favicon.ico */
