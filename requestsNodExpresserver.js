@@ -7,25 +7,34 @@ License: MIT.
 Contac me in: asdrubalcorales92@gmail.com
 My phone number is: +58 412 4811678 */
 
+//Var:
+
 //Funtions:
 function xinit()
 {
-    console.log('Ha entrado en la página de inicio');
+    console.log('* Ha entrado en la página de inicio');
     return 'xinit';
 }
 
 function pagina1()
 {
-    console.log('Ha entrado en la página 01');
+    console.log('* Ha entrado en la página 01');
     return 'pagina1';
 }
 
 function pagina2()
 {
-    console.log('Ha entrado en la página 02');
+    console.log('* Ha entrado en la página 02');
     return 'pagina2';
+}
+
+function favicon()//Controller favicon error
+{
+    console.log('* Lose favicon');
+    return "";
 }
 
 exports.xinit = xinit;
 exports.pagina1 = pagina1;
 exports.pagina2 = pagina2;
+exports.favicon = favicon;
