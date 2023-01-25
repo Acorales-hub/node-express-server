@@ -17,6 +17,7 @@ let manejador = {}//Vector
 manejador['/'] = Xrequests.xinit;
 manejador['/pagina1'] = Xrequests.pagina1;
 manejador['/pagina2'] = Xrequests.pagina2;
+manejador['/favicon.ico'] = Xrequests.favicon;//Controller favicon error
 
 
 Server.Init(Xrouter.Router,manejador);//Call the init and router
