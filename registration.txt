@@ -1,0 +1,6 @@
+/
+/favicon.ico
+/pagina2
+/favicon.ico
+/pagina3
+/favicon.ico
