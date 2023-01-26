@@ -30,7 +30,7 @@ function pagina2()
 
 function favicon()//Controller favicon error
 {
-    console.log('* Lose favicon');
+    console.log('* Controlled favicon bug'.italic.red.underline);
     return "";
 }
 
