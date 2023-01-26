@@ -10,7 +10,7 @@ My phone number is: +58 412 4811678 */
 const xcolor= require('colors');
 
 //Functions:
-function Router(manejador,xrute)//this is the router
+function Router(manejador,xrute,xreply)//this is the router
 {
     console.log('* Route detected:'+xrute.yellow.underline);
     
