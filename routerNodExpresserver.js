@@ -17,7 +17,8 @@ function Router(manejador,xrute,xreply)//this is the router
     //Evaluation
     if(typeof manejador[xrute] ==='function')
     {
-        return manejador[xrute]();
+        //return manejador[xrute]();
+        manejador[xrute](xreply)//Add reply
     }else{
         console.log("* This is not a function: "+xrute.red.underline)
     }  
