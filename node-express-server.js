@@ -11,7 +11,6 @@ let serverExpress = require('http'); //serverExpress contains all the methods of
 let url = require('url');//Records the URL address and allows you to specify custom behavior
 let fs = require('fs');//File system
 const color = require('colors');//Add color 
-let codeBrowser = 200;
 let listenPort = 1111;//listen virtual port default 
 
 console.log('\n==================𝙉𝙤𝙙𝙚 𝙀𝙭𝙥𝙧𝙚𝙨𝙨 𝙎𝙚𝙧𝙫𝙚𝙧===========')
