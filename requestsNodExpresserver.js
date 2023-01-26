@@ -13,6 +13,9 @@ My phone number is: +58 412 4811678 */
 function xinit()
 {
     console.log('* Ha entrado en la página de inicio');
+    //lock Code for xinit
+    let now = new Date().getTime;
+    while(new Date().getTime < now + 2000)
     return 'xinit';
 }
 
@@ -38,3 +41,16 @@ exports.xinit = xinit;
 exports.pagina1 = pagina1;
 exports.pagina2 = pagina2;
 exports.favicon = favicon;
+
+
+/*NOTE: Como Node Js esta pensado para soportar millones de peticiones de manera simultane sin que este genere un 
+gran costo en hardware, a diferencia de otros entornos, no inicia un hilo para cada una de las peticiones por el gasto
+de memoría que implica, si no, que todo se comparte dentro un mismo hilo, pero el incoveniente de que todo se comparta
+dentro de un mismo hilo, es que a veces podemos cometer errores en la programación, por ello se necesita realizar código
+bloquedor de ejecución y código desbloquedor de ejecución.
+
+Código Bloqueador: retiene por cierta cantidad de tiempo la ejeción de una instrucción
+Código Desboqueador:
+
+por tanto debemos hacer que el servidor sea no bloqueante.
+*/
