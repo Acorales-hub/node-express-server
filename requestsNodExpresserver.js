@@ -8,33 +8,49 @@ Contac me in: asdrubalcorales92@gmail.com
 My phone number is: +58 412 4811678 */
 
 //Var:
+let codeBrowser = 200;
 
 //Funtions:
-function xinit()
+function xinit(xreply)
 {
     console.log('* Ha entrado en la página de inicio');
     //lock Code for xinit
-    let now = new Date().getTime;
-    while(new Date().getTime < now + 2000)
-    return 'xinit';
+    //let now = new Date().getTime;
+    //while(new Date().getTime < now + 2000)
+    xreply.writeHead(codeBrowser,{"Content-Type":"text/html"});
+    xreply.write("<br><center><h1>Welcome to Node Express Server</h1><br>Powered by .::CORALESoftware::.</center>");
+    xreply.write('<br></br><p>This is Home Page and Node Express Server description</p>');
+    xreply.end();    
+    //return 'xinit';
 }
 
-function pagina1()
+function pagina1(xreply)
 {
     console.log('* Ha entrado en la página 01');
-    return 'pagina1';
+    xreply.writeHead(codeBrowser,{"Content-Type":"text/html"});
+    xreply.write("<br><center><h1>Welcome to Node Express Server</h1><br>Powered by .::CORALESoftware::.</center>");
+    xreply.write('<br></br><p>This is first Page.</p>');
+    xreply.end();  
+    ///return 'pagina1';
 }
 
-function pagina2()
+function pagina2(xreply)
 {
     console.log('* Ha entrado en la página 02');
-    return 'pagina2';
+    xreply.writeHead(codeBrowser,{"Content-Type":"text/html"});
+    xreply.write("<br><center><h1>Welcome to Node Express Server</h1><br>Powered by .::CORALESoftware::.</center>");
+    xreply.write('<br></br><p>This is second Page.</p>');
+    xreply.end(); 
+    //return 'pagina2';
 }
 
-function favicon()//Controller favicon error
+function favicon(xreply)//Controller favicon error
 {
     console.log('* Controlled favicon bug'.italic.red.underline);
-    return "";
+    xreply.writeHead(codeBrowser,{"Content-Type":"text/html"});
+    xreply.write("");
+    xreply.end(); 
+    //return "";
 }
 
 exports.xinit = xinit;
