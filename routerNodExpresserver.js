@@ -10,14 +10,15 @@ My phone number is: +58 412 4811678 */
 const xcolor= require('colors');
 
 //Functions:
-function Router(manejador,xrute)//this is the router
+function Router(manejador,xrute,xreply)//this is the router
 {
     console.log('* Route detected:'+xrute.yellow.underline);
     
     //Evaluation
     if(typeof manejador[xrute] ==='function')
     {
-        return manejador[xrute]();
+        //return manejador[xrute]();
+        manejador[xrute](xreply)//Add reply
     }else{
         console.log("* This is not a function: "+xrute.red.underline)
     }  
