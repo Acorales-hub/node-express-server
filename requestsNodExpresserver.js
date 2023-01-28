@@ -7,13 +7,13 @@ License: MIT.
 Contac me in: asdrubalcorales92@gmail.com
 My phone number is: +58 412 4811678 */
 
-//Var:
+//Var and Hoisting:
 let codeBrowser = 200;
 
 //Funtions:
 function xinit(xreply)
 {
-    console.log('* Ha entrado en la página de inicio');
+    console.log('* This is Home Page');
     //lock Code for xinit
     //let now = new Date().getTime;
     //while(new Date().getTime < now + 2000)
@@ -38,9 +38,9 @@ function pagina2(xreply)
 {
     console.log('* Ha entrado en la página 02');
     xreply.writeHead(codeBrowser,{"Content-Type":"text/html"});
-    xreply.write("<br><center><h1>Welcome to Node Express Server</h1><br>Powered by .::CORALESoftware::.</center>");
-    xreply.write('<br></br><p>This is second Page.</p>');
-    xreply.end(); 
+    //xreply.write("<br><center><h1>Welcome to Node Express Server</h1><br>Powered by .::CORALESoftware::.</center>");
+    //xreply.write('<br></br><p>This is second Page.</p>');
+    //xreply.end(); 
     //return 'pagina2';
 }
 
