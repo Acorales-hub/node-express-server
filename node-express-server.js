@@ -1,10 +1,5 @@
 /*.::CORALESoftware::.
-Name of the proyect: 𝙉𝙤𝙙𝙚 𝙀𝙭𝙥𝙧𝙚𝙨𝙨 𝙎𝙚𝙧𝙫𝙚𝙧
-Made by: Asdrúbal José Corales Pérez
-Description: This is a project made in Node.Js, for my briefcase
-License: MIT.
-Contac me in: asdrubalcorales92@gmail.com
-My phone number is: +58 412 4811678 */
+Name of the proyect: 𝙉𝙤𝙙𝙚 𝙀𝙭𝙥𝙧𝙚𝙨𝙨 𝙎𝙚𝙧𝙫𝙚𝙧*/
 
 //Var and Hoisting:
 let serverExpress = require('http'); //serverExpress contains all the methods of the HTTP protocol to run a web server
@@ -36,13 +31,18 @@ function Init(Router,manejador)//Capsule
         //container = Router(manejador,Rute,reply);//Call function router in roterNodExpresserver.js
         //let container = Router(manejador,Rute);//Call function router in roterNodExpresserver.js
         registration.write(Rute+'\n');// Conection Log
-        index = fs.readFileSync("www/index.html");//Read file from hard drive:
+        if(Rute == '/')
+        {
+            Rute = "index.html";//Read file from hard drive:
+        }
+        index = fs.readFileSync("www/"+Rute);//Read file from hard drive:
+        //index = fs.readFileSync("www/"+Rute+".html");//Read file from hard drive:
         //reply.writeHead(codeBrowser,{"Content-Type":"text/html"});//whriteHead sends the type of document to the header to the borwser
         //reply.write("<br><center><h1>Welcome to Node Express Server</h1><br>Powered by .::CORALESoftware::.</center>");
         //reply.write("<br><br>   "+Rute+" is a new connection, detected in: "+container)
         //reply.write("<br><br>   A new rute detected... "+Rute)
         reply.write(index);
-        reply.end(); // This line closes the connection
+        reply.end('End of connection'); // This line closes the connection
         console.log('--------------------------------------------------'.rainbow)
     }
     serverExpress.createServer(startServerExpress).listen(listenPort);//Call the Node Express Server
