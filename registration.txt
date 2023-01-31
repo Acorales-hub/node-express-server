@@ -511,3 +511,12 @@ index.html
 /favicon.ico
 /index.html
 /favicon.ico
+/services.html
+/favicon.ico
+/favicon.ico
+/contact.html
+/favicon.ico
+/services.html
+/favicon.ico
+/contact.html
+/favicon.ico
