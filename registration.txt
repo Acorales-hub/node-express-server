@@ -497,3 +497,17 @@ index.html
 /favicon.ico
 /index.html
 /favicon.ico
+/contact.html
+/favicon.ico
+/information.html
+/favicon.ico
+/services.html
+/favicon.ico
+/services.html
+/favicon.ico
+/services.html
+/favicon.ico
+/contact.html
+/favicon.ico
+/index.html
+/favicon.ico
