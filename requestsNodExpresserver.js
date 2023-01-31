@@ -9,20 +9,23 @@ let codeBrowser = 200;
 function xinit(xreply)
 {
     console.log('* Detection in the Home Page Node Express Server');
+    //xreply.writeHead(codeBrowser,{"Content-Type":"text/html"});
     //lock Code for xinit
     //let now = new Date().getTime;
     //while(new Date().getTime < now + 2000)
-    //xreply.writeHead(codeBrowser,{"Content-Type":"text/html"});
+   // xreply.writeHead(codeBrowser,{"Content-Type":"text/html"});
     //xreply.write("<br><center><h1>Welcome to Node Express Server</h1><br>Powered by .::CORALESoftware::.</center>");
     //xreply.write('<br></br><p>This is Home Page and Node Express Server description</p>');
-    //xreply.end();    
+    //reply.write("<br><br>   "+Rute+" is a new connection, detected in: "+container)
+    //reply.write("<br><br>   A new rute detected... "+Rute)
+    //xreply.end('End of connection');    
     //return 'xinit';
 }
 
 function information(xreply)
 {
     console.log('* Detection in the information Node Express Server');
-    xreply.writeHead(codeBrowser,{"Content-Type":"text/html"});
+    //xreply.writeHead(codeBrowser,{"Content-Type":"text/html"});
     //xreply.write("<br><center><h1>Welcome to Node Express Server</h1><br>Powered by .::CORALESoftware::.</center>");
     //xreply.write('<br></br><p>This is first Page.</p>');
     //xreply.end();  
@@ -33,8 +36,8 @@ function services(xreply)
 {
     console.log('* Detection in the services page Node Express Server');
     //xreply.writeHead(codeBrowser,{"Content-Type":"text/html"});
-    //xreply.write("<br><center><h1>Welcome to Node Express Server</h1><br>Powered by .::CORALESoftware::.</center>");
-    //xreply.write('<br></br><p>This is second Page.</p>');
+   // xreply.write("<br><center><h1>Welcome to Node Express Server</h1><br>Powered by .::CORALESoftware::.</center>");
+    //xreply.write('<br></br><p>This is Services Page.</p>');
     //xreply.end(); 
     //return 'services';
 }
