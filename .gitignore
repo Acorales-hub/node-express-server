@@ -1,8 +1,8 @@
 #Ignorar Archivos de ideas para añadir al servidor
-.codeIdeas.txt
+codeIdeas.txt
 
 #Ignorar la Carpeta de visual studio code
-vscode/
+.vscode/
 
-#Ignorar NesMail
-.NesMail.js
+#Ignorar nesMail
+nesMail.js
