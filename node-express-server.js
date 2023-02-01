@@ -25,29 +25,26 @@ function Init(Router,manejador)//Capsule
     function startServerExpress(requires,reply)//This function starts Node Express Server
     {
         //Router:
-        Rute = url.parse(requires.url).pathname;//captures what is entered in the url and stores it in a variable
-        registration = fs.createWriteStream('registration.txt',{'flags':'a'});//flags. add information registration.txt
+        Rute = url.parse(requires.url).pathname;//Captures what is entered in the url and stores it in a variable
         console.log('\tA new connection detected'.inverse+'\n');
-        registration.write(Rute+'\n');// Conection Log
-        //container = Router(manejador,Rute,reply);//Call function router in roterNodExpresserver.js
-        //container = Router(manejador,Rute);//Call function router in roterNodExpresserver.js
-        //registration.write(Rute+'\n');// Conection Log
-        if(Rute == '/'){Rute = "index.html";}
-        if(Rute == '/services'){Rute = "services.html";}
-        if(Rute == '/services'){Rute = "services.html";}
-        if(Rute == '/information'){Rute = "information.html";}
-        if(Rute == '/contact'){Rute = "contact.html";}
+        
+        //Registration:
+        registration = fs.createWriteStream('registration.txt',{'flags':'a'});//flags. add information registration.txt
+        registration.write(Rute+'\n');//Conection Log
+        //Container:
+        container = Router(manejador,Rute,reply);//Call function router in roterNodExpresserver.js
+        
+        //Validation URL: 
+            if(Rute == '/'){Rute = "index.html";}
+            if(Rute == '/services'){Rute = "services.html";}
+            if(Rute == '/services'){Rute = "services.html";}
+            if(Rute == '/information'){Rute = "information.html";}
+            if(Rute == '/contact'){Rute = "contact.html";}
         index = fs.readFileSync("www/"+Rute);//Read file from hard drive:
-        //index = fs.readFileSync("www/"+Rute+".html");//Read file from hard drive:
-        //reply.writeHead(codeBrowser,{"Content-Type":"text/html"});//whriteHead sends the type of document to the header to the borwser
-        //reply.write("<br><center><h1>Welcome to Node Express Server</h1><br>Powered by .::CORALESoftware::.</center>");
-        //reply.write("<br><br>   "+Rute+" is a new connection, detected in: "+container)
-        //reply.write("<br><br>   A new rute detected... "+Rute)
-        reply.write(index);//OJO
-        //reply.end('End of connection'); // This line closes the connection
+        reply.write(index);
         reply.end('');
         console.log('--------------------------------------------------'.rainbow)
-    }
+    }   
     serverExpress.createServer(startServerExpress).listen(listenPort);//Call the Node Express Server
 }
 //Init(); 

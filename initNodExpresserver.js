@@ -16,4 +16,3 @@ manejador['/contact'] = Xrequests.contact;
 manejador['/favicon.ico'] = Xrequests.favicon;//Controller favicon error
 
 Server.Init(Xrouter.Router,manejador);//Call the init and router
-//Server.Init();//Call the init
