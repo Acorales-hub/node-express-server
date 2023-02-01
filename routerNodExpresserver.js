@@ -20,13 +20,3 @@ function Router(manejador,xrute,xreply)//this is the router
     }  
 }
 exports.Router = Router; //router function export
-
-
-/*NOTE 01: si no se evalua el vector manejador[xrute] va a generar un error de ejecución
-motivado a la ruta ./favicon.ico que solicita el icono de cada website para la pestaña
-del navegador, por cual se debe hacer una función con su estructura de control y evaluación
-que trate a ./favicon.ico */
-
-/*NOTE 02: la función de control para ./favicon se agrego en el archivo requestsNodExpresserver.js 
-y se añadio un valor de control para favicon en el vector manejador['./favicon.ico'] en el archivo
-initNodExpresserver.js */
