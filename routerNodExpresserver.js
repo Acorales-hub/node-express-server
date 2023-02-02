@@ -8,7 +8,7 @@ const xcolor= require('colors');
 //Functions:
 function Router(manejador,xrute,xreply)//this is the router
 {
-    console.log('* Route detected:'+xrute.yellow.underline);
+    console.log('-> A new connection detected:'.bold+''+xrute);
     
     //Evaluation
     if(typeof manejador[xrute] ==='function')
@@ -16,7 +16,7 @@ function Router(manejador,xrute,xreply)//this is the router
         //return manejador[xrute]();
         manejador[xrute](xreply)//Add reply
     }else{
-        console.log("* This is not a function: "+xrute.red.underline)
+        console.warn("-> This is not a function:".bold.cyan+''+xrute)
     }  
 }
 exports.Router = Router; //router function export
