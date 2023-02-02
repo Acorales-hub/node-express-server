@@ -3,9 +3,9 @@ Name of the proyect: 𝙉𝙤𝙙𝙚 𝙀𝙭𝙥𝙧𝙚𝙨𝙨 𝙎𝙚𝙧�
 Name of the archive: initNodExpresserver*/
 
 //Instantantiation
-let Server = require('./node-express-server');//Call Server
-let Xrouter = require('./routerNodExpresserver');//Call router
-let Xrequests = require('./requestsNodExpresserver.js');//Call requests
+const Server = require('./node-express-server');//Call Server
+const Xrouter = require('./routerNodExpresserver');//Call router
+const Xrequests = require('./requestsNodExpresserver.js');//Call requests
 
 //Requests handler
 let manejador = {}//Vector
