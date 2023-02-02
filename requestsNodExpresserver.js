@@ -64,10 +64,19 @@ function favicon(xreply)//Controller favicon error
     //xreply.end("End of connection"); 
     return "";
 }
+//Modification exports
+module.exports =
+{
+    xinit:xinit,
+    information:information,
+    services:services,
+    contact:contact,
+    favicon:favicon
+};
 
 //to export:
-exports.xinit = xinit;
+/*exports.xinit = xinit;
 exports.information = information;
 exports.services = services;
 exports.contact = contact;
-exports.favicon = favicon;
+exports.favicon = favicon;*/
