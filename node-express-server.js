@@ -47,7 +47,13 @@ Name of the proyect: 𝙉𝙤𝙙𝙚 𝙀𝙭𝙥𝙧𝙚𝙨𝙨 𝙎𝙚𝙧�
                 if(Rute =='information'){Rute ="information.html"}
                 if(Rute =='information.html'){Rute="information.html"}
                 
+                //Validation URL services page:
+                if(Rute =='/services'){Rute ="services.html"}
+                if(Rute =='/services.html'){Rute="services.html"}
 
+                //Validation URL contact page:
+                if(Rute =='/contact'){Rute ="contact.html"}
+                if(Rute =='/contact.html'){Rute="contact.html"}  
 
                         
                 index = fs.readFileSync("www/"+Rute);//Read file from hard drive:
