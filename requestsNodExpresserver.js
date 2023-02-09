@@ -23,6 +23,11 @@ function xinit(xreply)
     return 'xinit';
 }
 
+function indexHtml(xreply)
+{
+    return indexHtml;
+}
+
 function information(xreply)
 {
     console.log('* '+'Detection path'.cyan.underline+' in information page');
@@ -63,13 +68,22 @@ function favicon(xreply)//Controller favicon error
     //xreply.end("End of connection"); 
     return "";
 }
+
+function notFound(xreply)
+{
+    console.log('-> Detection path:'.bold.cyan+' in Not Found page');
+    return notFound;
+}
+
 //Add exports in a object
 module.exports =
 {
     xinit:xinit,
+    indexHtml,
     information:information,
     services:services,
     contact:contact,
+    notFound:notFound,
     favicon:favicon
 };
 
