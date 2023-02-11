@@ -5,20 +5,22 @@ Name of the proyect: 𝙉𝙤𝙙𝙚 𝙀𝙭𝙥𝙧𝙚𝙨𝙨 𝙎𝙚𝙧�
     //Modules:
     const serverExpress = require('http'); //serverExpress contains all the methods of the HTTP protocol to run a web server
     const url = require('url');//Records the URL address and allows you to specify custom behavior
+    //const iP = require('ip');
+    //const xIp = iP.address();
     const fs = require('fs');//File system
     const color = require('colors');//Add color 
     const presentation = require('./presentation.js');
     //Var:
     let listenPort = 1111;//listen virtual port default 
-    let index;//Hoisting(declarar sin asignar valor para apartar un espacio de memoría)
+    let index;
     let container;
     let registration;
     let Rute;//Container the rute of path URL
-
+    let data = new Date(); data.toUTCString();
 
     //console.log(presentation.show('this is a MSG'));//Show the welcome
     presentation.show();//Show the welcome
-
+    console.log(data);  
 
     //Functions:
     function Init(Router,manejador)//Capsule
@@ -31,8 +33,9 @@ Name of the proyect: 𝙉𝙤𝙙𝙚 𝙀𝙭𝙥𝙧𝙚𝙨𝙨 𝙎𝙚𝙧�
             
             //Registration:
             registration = fs.createWriteStream('registration.txt',{'flags':'a'});//flags. add information registration.txt
-            registration.write(Rute+'\n');//Conection Log
-            
+            //registration.write(Rute+'\t| '+data+'|\t'+xIp+'\n');//Conection Log
+            registration.write(Rute+'\t| '+data+'\n');//Conection Log
+
             //Container:
             container = Router(manejador,Rute,reply);//Call function router in roterNodExpresserver.js
             
